@@ -1,11 +1,11 @@
 #include <iostream>
-#include <conio.h>
 using namespace std;
 
 int FindRoot(int num) {
-    int start=0, end=num;
-    int mid = (start + ((end-start)/2));
-    int ans=0;
+    int start=0, end, mid, ans;
+    end = num;
+    mid = (start + ((end-start)/2));
+    ans=0;
     
     while(start <= end) {
         long long int square = (mid*mid);
@@ -26,9 +26,9 @@ int FindRoot(int num) {
 }
 
 int main() {
-    int arr[100], n, p;
+    int arr[100], n;
 
-    cout<<"Enter the number: ";
+    cout<<"Enter any number: ";
     cin>>n;
 
     cout<<"\nSquare root of "<<n<<" is "<<FindRoot(n);
